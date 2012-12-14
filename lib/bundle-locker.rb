@@ -1,4 +1,4 @@
-require "bundle-locker/version"
+require File.expand_path("bundle-locker/version", File.dirname(__FILE__))
 require 'bundler'
 module Bundle
   module Locker
@@ -38,6 +38,10 @@ module Bundle
           file.puts contents
         end
       end
+    end
+
+    def self.lock(gemfile_name)
+      Parser.new(gemfile_name).call
     end
   end
 end

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require File.expand_path('../lib/bundle-locker', File.dirname(__FILE__))
+
+if gemfile_name = ENV['GEMFILE']
+  if File.exist?(gemfile_name)
+    Bundle::Locker.lock(gemfile_name)
+  else
+    $stderr.puts "#{gemfile_name} does not exist"
+    exit!(-1)
+  end
+else
+  $stdout.puts "Lock all gems in a Gemfile to the specific version in Gemfile.lock"
+  $stdout.puts "See usage:"
+  $stdout.puts "\GEMFILE=[./path/to/Gemfile] ./#{File.basename(__FILE__)}"
+  exit!(-1)
+end
