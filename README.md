@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-This is a very raw implementation
+$ bundle-locker /path/to/Gemfile
 
 ## Contributing
 
