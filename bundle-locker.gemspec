@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Bundle::Locker::VERSION
   gem.authors       = ["Jeremy Friesen"]
   gem.email         = ["jeremy.n.friesen@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Lock Gemfile gem declarations to specific Gemfile.lock versions}
+  gem.summary       = %q{Lock Gemfile gem declarations to specific Gemfile.lock versions}
+  gem.homepage      = "https://github.com/jeremyf/bundle-locker"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

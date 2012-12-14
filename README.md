@@ -1,6 +1,6 @@
 # Bundle::Locker
 
-TODO: Write a gem description
+Lock Gemfile gem declarations to specific Gemfile.lock versions
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This is a very raw implementation
 
 ## Contributing
 
