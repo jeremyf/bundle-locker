@@ -11,7 +11,10 @@ module Bundle
       def call
         gem_dictionary = {}
         File.readlines(@gemfile_name).each do |line|
-          if /\A(?<prefix>\s*gem\s+['"])(?<gem_name>[^'"]+)(?<suffix>['"])/ =~ line
+          if /\A(\s*gem\s+['"])([^'"]+)(['"])/ =~ line
+            prefix = $1
+            gem_name = $2
+            suffix = $3
             gem_dictionary[gem_name] = {prefix: prefix, original: line, suffix: suffix, gem_name: gem_name}
           end
         end
