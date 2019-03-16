@@ -35,8 +35,8 @@ module Bundle
               else
                 replacement << "'#{dictionary[:locked_version]}'\n"
               end
-              # not replace prefix `require` and `path`
-              unless dictionary[:original].match(/(require|path)/)
+              # not replace prefix `require`, `path` and `branch`
+              unless dictionary[:original].match(/(require|path|branch)/)
                 contents.gsub!(dictionary[:original], replacement)
               end
             end
